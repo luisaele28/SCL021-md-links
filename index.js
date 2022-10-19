@@ -1,36 +1,35 @@
 #!/usr/bin/env node
-//importamos fs y path
-const fs = require("fs"); //es el módulo nativo de Node. js que permite interactuar con los archivos del sistema.
-const path = require("path"); //path nos permite poder manejar las rutas tanto relativas como absolutas de nuestra PC y de nuestro proyecto.
+const fs = require("fs"); 
+const path = require("path"); 
 const parseMD = require("parse-md").default;
 const fetch = require("node-fetch");
 
 function MdLink(ruta) {
-  //console.log("hola", ruta);
+  //console.log("hello", ruta);
 
-  //comprabando si las rutas existen
+  //comprueba si la ruta existe
   const routeExist = () => fs.existsSync(ruta);
   //console.log(routeExist());
 
-  //comprobamos si es archivo
+  //se comprueba si es archivo
   const routeType = (source) => {
     if (source.isFile() === true) {
       return true;
     }
     return false;
   };
-  //leer archivos de tu ruta principal
+  //lee archivos de tu ruta principal
   const routeFiles = fs.statSync(ruta);
   console.log("es archivo? " + routeType(routeFiles));
   //console.log(routeIsAFile);
-  //HASTA AQUI OK
+
 
   //lee los archivos de la ruta relativa
   const dir = fs.readdirSync(ruta, { encoding: "utf8", flag: "r" });
   //console.log("estos son los archivos del directorios" + dir);
   //console.log(dir);
 
-  //filtro de archivo md
+  //filtra archivos md
   let array = [];
   function rute(dir) {
     return (array = dir.filter((archivo) => {
@@ -38,7 +37,7 @@ function MdLink(ruta) {
       //console.log(array);
     }));
   }
-  //leer archivos MD
+  //leer archivos md
   const arrayMd = rute(dir);
   function readMD(paths) {
     //console.log("ejecutando path");
@@ -50,14 +49,14 @@ function MdLink(ruta) {
   readMD(arrayMd);
   //console.log(rute(dir));
 
-  //Existen los links ?
+  //verifica si Existe los links ?
   const fileContents = fs.readFileSync(process.argv[2]
     , "utf8");
   const { metadata, content } = parseMD(fileContents);
   //console.log(metadata);
   //console.log(content);
 
-  //se leen los links
+  //lee los links
   const Url =
     /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim;
   function FindLinks(content) {
