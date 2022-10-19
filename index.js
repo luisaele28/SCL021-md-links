@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path"); 
 const parseMD = require("parse-md").default;
 const fetch = require("node-fetch");
+const emoji = require("node-emoji");
 
 function MdLink(ruta) {
   //console.log("hello", ruta);
@@ -83,7 +84,7 @@ function MdLink(ruta) {
    .then((result)=>{
    result.forEach((res)=>{
      if(res.status === "fulfilled"){
-      if(res.value.status === 200 ) {
+      if(res.value.status === 200) {
         console.log("Exito ", res.value?.status, res.value?.url);
       }else {console.log("Error ", res.value?.status, res.value?.url);}
        exitos.push({status: res.value?.status, url : res.value?.url});
@@ -98,9 +99,9 @@ function MdLink(ruta) {
    });
  }).finally(() => {
    console.log("-------------------------------------------")
-   console.log("| total exito : ", validos.length, " | ","total errores: ", broken.length, " | ")
+   console.log("| total exito : ", validos.length, (emoji.get('innocent')), " | ","total errores: ", broken.length, (emoji.get('imp')), " | ")
    console.log("-------------------------------------------")
-   console.log("|         Detalle Exito                   |")
+   console.log("|     Detalle Exito : ", validos.length, emoji.get('heart'))
    console.log("-------------------------------------------")
    exitos.forEach((exito) => console.log(`status : ${exito.status}  url : ${exito.url}`))
  });
