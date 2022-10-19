@@ -3,5 +3,14 @@
   "version": "0.1.0",
   "engines": {
     "node": ">=16.x"
+  },
+  "main": "./index.js",
+  "bin": {
+    "mdlc": "./index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "parse-md": "^2.0.0"
   }
 }
+
