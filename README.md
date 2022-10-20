@@ -1,4 +1,4 @@
-![Nombre de la Librería](./img/Nombredelibrería.png)
+![Nombre de la Librería](./img/Nombredelibreria.png)
 
 1. ***Definición del Proyecto:***
 
