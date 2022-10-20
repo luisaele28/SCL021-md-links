@@ -28,6 +28,6 @@ Markdown es muy utilizado en plataformas como GitHub, foros, blogs como también
 
 5. ***Ejemplos como aparece en la consola:***
 
-![mostrando en consola](./img/mostrandoenconsola1.jpg)
-![mostrando en consola](./img/mostrandoenconsola2.jpg)
-![mostrando en consola](./img/mostrandoenconsola3.jpg)
+![mostrando en consola](./img/mostrandoenconsola1.png)
+![mostrando en consola](./img/mostrandoenconsola2.png)
+![mostrando en consola](./img/mostrandoenconsola3.png)
