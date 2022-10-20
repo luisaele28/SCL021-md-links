@@ -32,3 +32,4 @@ Markdown es muy utilizado en plataformas como GitHub, foros, blogs como también
 ![mostrando en consola](./img/mostrandoenconsola1.png)
 ![mostrando en consola](./img/mostrandoenconsola2.png)
 ![mostrando en consola](./img/mostrandoenconsola3.png)
+![publicando libreria](./img/libreríainstalada.png)

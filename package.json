@@ -1,9 +1,17 @@
 {
-  "name": "md-links",
+  "name": "md-links-mdlc",
   "version": "0.1.0",
+  "description": "Diagrama de flujo",
   "engines": {
     "node": ">=16.x"
   },
+
+  "author": "Luisa Carrillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisaele28/SCL021-md-links"
+  },
+
   "main": "./index.js",
   "bin": {
     "mdlc": "./index.js"
