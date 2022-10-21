@@ -9,7 +9,7 @@ function MdLink(ruta) {
   //console.log("hello", ruta);
 
   //comprueba si la ruta existe
-  const routeExist = () => fs.existsSync(ruta);
+  //const routeExist = () => fs.existsSync(ruta);
   //console.log(routeExist());
 
   //se comprueba si es archivo

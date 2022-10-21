@@ -5,18 +5,17 @@
   "engines": {
     "node": ">=16.x"
   },
-
   "author": "Luisa Carrillo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/luisaele28/SCL021-md-links"
   },
-
   "main": "./index.js",
   "bin": {
     "mdlc": "./index.js"
   },
   "dependencies": {
+    "eslint": "^8.25.0",
     "node-emoji": "^1.11.0",
     "node-fetch": "^2.6.7",
     "parse-md": "^2.0.0"
